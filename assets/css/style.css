@@ -53,6 +53,7 @@ button{
 }
 #submit, #results, #restart, .question, .answers{
 	display: none;
+	font-size: 20px;
 } 
 
 .rules{

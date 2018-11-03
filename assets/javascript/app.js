@@ -6,7 +6,7 @@ $(document).ready(function(){
         var number = 50;
         alert("Let's begin!");
       $("#start-button").on("click", start);  // starts the games 
-      $("#submit").on("click", finish);  // submits answers and finishes the game
+      $("#submit").on("click", finish); // submits answers and finishes the game
       $("#restart").on("click", restart);  // restarts the games 
   // ----------------------------------------------------------------
   // functions
@@ -37,10 +37,12 @@ $(document).ready(function(){
           $(".answers").hide();
           $("#submit").hide();
       }
+
       function finish(){
           number = 1; // if number is equal to 0 number will show -1 so 1 has to be selected
           clearInterval(counter); // stops the timer
           timer();
+          $('#results').append("<div>" + "This many correct:" + correct + "</div>")
       }
   
       function restart(){
