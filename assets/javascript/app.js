@@ -1,5 +1,6 @@
 var card = $("#quiz-area");
 
+
 // Question set
 var questions = [{
   question: "Which word conjucts two words together?",
@@ -24,6 +25,9 @@ var questions = [{
 
 }];
 
+
+
+
 // Variable that will hold the setInterval
 var timer;
 
@@ -42,8 +46,6 @@ var game = {
     }
   },
 
-  
-
   start: function() {
     timer = setInterval(game.countdown, 1000);
 
@@ -61,7 +63,7 @@ var game = {
 
     card.append("<button id='done'>Done</button>");
   },
- 
+
   done: function() {
 
     $.each($("input[name='question-0']:checked"), function() {
@@ -112,9 +114,6 @@ var game = {
      this.result();
 
   },
-
-
- 
 
   result: function() {
     
